@@ -35,7 +35,8 @@ const dataArray = [
     { id: 25, name: "Protsahan India Foundation", cause: "Financial Support", description: "support more families, especially pregnant women, sex workers, manual scavengers & those at the bottom of the access pyramid in urban Delhi slums.", location: "Delhi", donate: "https://www.ketto.org/fundraiser/protsahanforcovid19relief" },
     { id: 26, name: "PAIGAM", cause: "Financial Support", description: "Protsahan’s team has been relentlessly following up by providing dry rations and cooked meals with support from partner organizations and individuals. Our teams have visited some of the hardest-hit communities of daily wage workers where food and medical aid is urgently needed for pregnant women and children.", location: "Delhi", donate: "https://paigam.network/work/delhi-waste-pickers-fight-against-corona/" },
     { id: 27, name: "NEMA Fundraising", cause: "Oxygen Concentrator donation", description: "NEMA is raising funds for American Association of Physicians of Indian Origin. AAPI is working with suppliers in the US to source Oxygen Concentrators and Ventilators to directly send to India.", location: "India", donate: "https://www.facebook.com/donate/173905924506712/?fundraiser_source=whatsapp_share" },
-    { id: 28, name: "Chopra foundation", cause: "Medical Help", description: "As India faces an overwhelming surge of record-breaking COVID-19 cases and deaths, the Chopra Foundation would like to invite our Global Family to fund and support the Heart Care Foundation of India which will oversee the support for Covid patients", location: "India", donate: "https://www.gofundme.com/f/india-covid-surge-relief?utm_campaign=p_cp_url&utm_medium=os&utm_source=customer" }
+    { id: 28, name: "Chopra foundation", cause: "Medical Help", description: "As India faces an overwhelming surge of record-breaking COVID-19 cases and deaths, the Chopra Foundation would like to invite our Global Family to fund and support the Heart Care Foundation of India which will oversee the support for Covid patients", location: "India", donate: "https://www.gofundme.com/f/india-covid-surge-relief?utm_campaign=p_cp_url&utm_medium=os&utm_source=customer" },
+    { id: 29, name: "We Bring Joy foundation", cause: "Food supply", description: "In collaboration with Zomato, providing meals to poor people living on streets of Mumbai.", location: "Mumbai", donate: "https://m.facebook.com/story.php?story_fbid=4209990449065333&id=100001632596895" }
 ];
 
 const GroupRow: React.FunctionComponent<IGroupRowProps> = ({
@@ -66,29 +67,32 @@ const tablePropsInit: ITableProps = {
       dataType: DataType.String,
       key: "name",
       title: "NAME",
-      style: { fontWeight: 'bold' }
+      style: { fontWeight: 'bold', textAlign: 'left' }
     },
     {
       dataType: DataType.String,
       key: "cause",
       title: "CAUSE",
-      sortDirection: SortDirection.Ascend
+      sortDirection: SortDirection.Ascend,
+      style:  { textAlign: 'left' }
     },
     {
       dataType: DataType.String,
       key: "description",
-      title: "DESCRIPTION"
+      title: "DESCRIPTION",
+      style:  { textAlign: 'left' }
     },
     {
       dataType: DataType.String,
       key: "location",
-      title: "LOCATION"
+      title: "LOCATION",
+      style:  { textAlign: 'left' }
     },
     {
         dataType: DataType.String,
         key: "donate",
         title: "HOW TO DONATE",
-        style:  {}
+        style:  { textAlign: 'left' }
     }
   ],
   format: ({ column, value }) => {
