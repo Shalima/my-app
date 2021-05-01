@@ -93,7 +93,7 @@ const tablePropsInit: ITableProps = {
   ],
   format: ({ column, value }) => {
     if (column.key === 'donate'){
-      return ` <a href=${value}>${value}</a>`;
+      return value.indexOf('https') !== -1 ? `<a href=${value}>${value}</a>` : `${value}`;
     }
 },
   data: dataArray,
