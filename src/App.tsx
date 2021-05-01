@@ -1,12 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
+import sdmlogo from './sdmlogo.jpeg'
 import './App.css';
 import Demo from './components/Sources';
 import { Grid } from '@material-ui/core';
 function App(){
   return (
     <div>
-      <Demo />
+      <Grid container direction="column" alignItems='center'>
+      <Grid>
+        <img src={sdmlogo} alt="San Diego Malayalees" height={100} width={300}></img>
+      </Grid>
+      <br/>
+      <Grid>
+        <a href="https://www.sandiegomalayalees.com/">Go to Home Page</a>
+      </Grid>
+      <br/>
+      <Grid>
+        <Demo />
+      </Grid>
       <br/>
       <div><b><i><u>Other resources</u></i></b></div>
       <br/>
@@ -20,6 +32,7 @@ function App(){
         <div><b>Disclaimer</b></div>
         <div>SDM or its board members are not directly involved or have any liability in any of the above organizations or fund raisers.</div>
         <div>SDM or its board members does not favor any of the above efforts and is up to the donor to choose the beneficiary.</div>
+      </Grid>
       </Grid>
     </div>
   )
