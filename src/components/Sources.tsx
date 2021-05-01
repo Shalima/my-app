@@ -99,12 +99,6 @@ const tablePropsInit: ITableProps = {
   data: dataArray,
   groups: [{ columnKey: "cause" }],
   filteringMode: FilteringMode.FilterRow,
-  paging: {
-    enabled: true,
-    pageIndex: 0,
-    pageSize: 10,
-    position: PagingPosition.Bottom
-  },
   rowKeyField: "id"
 };
 
