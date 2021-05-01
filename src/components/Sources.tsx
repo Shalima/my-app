@@ -93,7 +93,7 @@ const tablePropsInit: ITableProps = {
   ],
   format: ({ column, value }) => {
     if (column.key === 'donate'){
-      return value.indexOf('https') !== -1 ? `<a href=${value}>${value}</a>` : `${value}`;
+      return ` <a href=${value}>${value}</a>`;
     }
 },
   data: dataArray,
@@ -125,7 +125,7 @@ const GroupingCustomRowDemo: React.FC = () => {
           cellText: {
             content: (props) => {
               switch (props.column.key){
-                case 'donate': return  <a href={props.value}>{props.value}</a>;
+                case 'donate': return props.value.includes('http') ?  <a href={props.value}>{props.value}</a> : props.value;
               }
             }
           }
