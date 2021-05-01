@@ -5,7 +5,7 @@ import { updateGroupsExpanded } from "ka-table/actionCreators";
 import EmptyCells from "ka-table/Components/EmptyCells/EmptyCells";
 import { IGroupRowProps } from "ka-table/props";
 import { DispatchFunc } from "ka-table/types";
-import { DataType, FilteringMode, SortDirection } from 'ka-table/enums';
+import { DataType, FilteringMode, PagingPosition, SortDirection } from 'ka-table/enums';
 
 const dataArray = [
     { id: 1, name: "Kerala CMDRF", cause: "Goverment Organization", description: "Purchase COVID vaccine; Provide relief to persons affected by different disasters.", location: "Kerala", donate: "https://donation.cmdrf.kerala.gov.in/" },
@@ -99,6 +99,12 @@ const tablePropsInit: ITableProps = {
   data: dataArray,
   groups: [{ columnKey: "cause" }],
   filteringMode: FilteringMode.FilterRow,
+  paging: {
+    enabled: true,
+    pageIndex: 0,
+    pageSize: 10,
+    position: PagingPosition.Bottom
+  },
   rowKeyField: "id"
 };
 
