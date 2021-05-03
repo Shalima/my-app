@@ -36,7 +36,8 @@ const dataArray = [
     { id: 26, name: "PAIGAM", cause: "Financial Support", description: "Protsahan’s team has been relentlessly following up by providing dry rations and cooked meals with support from partner organizations and individuals. Our teams have visited some of the hardest-hit communities of daily wage workers where food and medical aid is urgently needed for pregnant women and children.", location: "Delhi", donate: "https://paigam.network/work/delhi-waste-pickers-fight-against-corona/" },
     { id: 27, name: "NEMA Fundraising", cause: "Oxygen Concentrator donation", description: "NEMA is raising funds for American Association of Physicians of Indian Origin. AAPI is working with suppliers in the US to source Oxygen Concentrators and Ventilators to directly send to India.", location: "India", donate: "https://www.facebook.com/donate/173905924506712/?fundraiser_source=whatsapp_share" },
     { id: 28, name: "Chopra foundation", cause: "Medical Help", description: "As India faces an overwhelming surge of record-breaking COVID-19 cases and deaths, the Chopra Foundation would like to invite our Global Family to fund and support the Heart Care Foundation of India which will oversee the support for Covid patients", location: "India", donate: "https://www.gofundme.com/f/india-covid-surge-relief?utm_campaign=p_cp_url&utm_medium=os&utm_source=customer" },
-    { id: 29, name: "We Bring Joy foundation", cause: "Food supply", description: "In collaboration with Zomato, providing meals to poor people living on streets of Mumbai.", location: "Mumbai", donate: "https://m.facebook.com/story.php?story_fbid=4209990449065333&id=100001632596895" }
+    { id: 29, name: "We Bring Joy foundation", cause: "Food supply", description: "In collaboration with Zomato, providing meals to poor people living on streets of Mumbai.", location: "Mumbai", donate: "https://m.facebook.com/story.php?story_fbid=4209990449065333&id=100001632596895" },
+    { id: 30, name: "Anchal Charitable Organization", cause: "Essential supplies", description: "The Society has now decided to provide all possible support, physical and financial, to covid-affected poor and the needy families in the neighbouring areas by providing, cooked food, grocery kits, oxygen cylinders, medicines, sanitizers, masks, PPE kits, cremation/burial of the family members who have passed away. ", location: "Delhi", donate: "Federal Bank : Account Name :	ST. GREGORIOS CHARITABLE SOCIETY (REGD.) SB Account No. :	14530100036821 Bank Branch :	Federal Bank, Prashant Vihar, Rohini, Delhi. IFSC Code :	FDRL 0001474  State Bank : Account Name :	ST. GREGORIOS CHARITABLE SOCIETY (REGD.) SB Account No. :	67133681582 Bank Branch :	Federal Balaji Plaza,Sector 8,Rohini 85 " }
 ];
 
 const GroupRow: React.FunctionComponent<IGroupRowProps> = ({
@@ -73,7 +74,7 @@ const tablePropsInit: ITableProps = {
       dataType: DataType.String,
       key: "cause",
       title: "CAUSE",
-      sortDirection: SortDirection.Ascend,
+      sortDirection: SortDirection.Descend,
       style:  { textAlign: 'left' }
     },
     {
